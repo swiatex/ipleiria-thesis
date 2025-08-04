@@ -29,7 +29,7 @@ The document includes a glossary, and an acronym and symbol list, accessible at 
 \section{Figures}
 In \LaTeX, integrating figures is a straightforward process. To insert them, you should utilise the environment \verb|\begin{figure}|. You can customise the \verb|width| parameter according to your requirements, but it is crucial to select a high-quality figure when inserting it into your documents. It is equally crucial to furnish a well-crafted caption. If necessary, consider including citations or references to indicate the figure's origin. The caption environment is denoted as \verb|\caption{TEXT}|. To generate a smaller caption for the Table of Figures, be sure to utilise the format \verb|\caption[SMALL_TEXT]{BIG_TEXT}|. By following the aforementioned tips, we can create a figure as demonstrated in \autoref{fig:figure-01}.
 
-\begin{figure}[!htpb]
+\begin{figure}[!htpb] 
     \centering
     \includegraphics[width=\linewidth]{Figures/PezizaTuberosa.jpg}
     \caption[Illustration of the fungus Dumontinia tuberosa.]{Illustration of the fungus Dumontinia tuberosa by physician, mycologist, and illustrator Charles Tulasne (1816–1884) in the book Selecta Fungorum Carpologia (1861–65). (Name of the original work: Peziza tuberosa parasite on Anemone nemorosa).}
@@ -38,7 +38,7 @@ In \LaTeX, integrating figures is a straightforward process. To insert them, you
 
 For comparison or for other reasons, you can insert side-by-side figures using both the \verb|\begin{figure}| and \verb|\begin{subfigure}| environments. You can also refer to the sub-figure as \autoref{fig:figure-02.1} and \autoref{fig:figure-02.2}.
 
-\begin{figure}[!htpb]
+\begin{figure}[!htpb] 
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
@@ -67,17 +67,17 @@ Different table environments must be within a \texttt{\textbackslash begin\{tabl
 \subsection{Tabular Environment}
 The conventional \verb|\begin{tabular}| environment enables you to create a simple yet elegant table. \autoref{tab:table-01} is generated using a centering environment for added emphasis. It also incorporates the \verb|booktab| configuration for a more sophisticated table style.
 
-\begin{table}[!htpb]
+\begin{table}[!htpb] 
     \caption{A table showcasing the usage of the tabular environment.}
     \label{tab:table-01}
     \centering
     \begin{tabular}{llc}
         \toprule
-        \textbf{Header 01} & \textbf{Header 02} & \textbf{Header 03} \\ 
+        \textbf{Header 01} & \textbf{Header 02} & \textbf{Header 03} \ 
         \midrule
-        Lorem Ipsum         & Pharetra Dolor    & $\checkmark$  \\
-        Amet Consectetuer   & Curabitur Aliquet & -             \\
-        Praesent Mauris     & Praesent Libero   & $\checkmark$  \\
+        Lorem Ipsum         & Pharetra Dolor    & $\checkmark$  \ 
+        Amet Consectetuer   & Curabitur Aliquet & -             \ 
+        Praesent Mauris     & Praesent Libero   & $\checkmark$  \ 
         \bottomrule
     \end{tabular}
 \end{table}
@@ -85,18 +85,18 @@ The conventional \verb|\begin{tabular}| environment enables you to create a simp
 \subsection{Tabularx Environment}
 Employ the \verb|\begin{tabularx}| package to construct a table featuring automatically expanding multi-columns. To achieve this automatic behaviour for multi-columns, you can use the following environment: \verb|\begin{tabularx}{\textwidth}{lX}|, where \verb|X| is the column that will function as a multi-column. Use \verb|C| to centre the multi-column, and \verb|L| and \verb|R| to align left and right respectively. \autoref{tab:table-02} showcases the usage of the \verb|\begin{tabularx}| environment.
 
-\begin{table}[!htpb]
+\begin{table}[!htpb] 
     \caption{A table showcasing the usage of the tabularx environment.}
     \label{tab:table-02}
     \begin{tabularx}{\textwidth}{lX}
         \toprule
-        \textbf{Header 01} & \textbf{Header 02} \\ 
+        \textbf{Header 01} & \textbf{Header 02} \ 
         \midrule
-        Foo Bar Baz & Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. \\
-        Ipsum Dolor & Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur aliquet quam id dui. \\
-        Dolor Sit & Phasellus condimentum elementum justo, quis interdum est sagittis ac. Vestibulum non arcu sit amet justo lobortis semper. \\
-        Amet Consectetuer & Integer nec odio praesent libero sed cursus ante dapibus diam sed nisi vestibulum non arcu. \\
-        % Consectetuer Adipiscing & Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. \\
+        Foo Bar Baz & Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. \ 
+        Ipsum Dolor & Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur aliquet quam id dui. \ 
+        Dolor Sit & Phasellus condimentum elementum justo, quis interdum est sagittis ac. Vestibulum non arcu sit amet justo lobortis semper. \ 
+        Amet Consectetuer & Integer nec odio praesent libero sed cursus ante dapibus diam sed nisi vestibulum non arcu. \ 
+        % Consectetuer Adipiscing & Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. \ 
         \bottomrule
     \end{tabularx}
 \end{table}
@@ -145,7 +145,7 @@ Oliver Smith & oliver.smith@email.com & Sales Representative \\
 Pamela Turner & pamela.turner@email.com & Legal Counsel \\
 Quincy Brown & quincy.brown@email.com & IT Consultant \\
 Rachel Moore & rachel.moore@email.com & Content Writer \\
-Samuel White & samuel.white@email.com & Research Scientist \\ 
+Samuel White & samuel.white@email.com & Research Scientist \ 
 Amy Harris & amy.harris@email.com & Digital Strategist \\
 Brian Cook & brian.cook@email.com & Operations Manager \\
 Catherine Ross & catherine.ross@email.com & Brand Manager \\
@@ -170,7 +170,7 @@ Steven Martin & steven.martin@email.com & Robotics Engineer \\
 \subsection{Complex Tables}
 Creating intricate tables in \LaTeX\ can be a somewhat challenging task. Therefore, we highly recommend using the \href{https://www.tablesgenerator.com/}{Table Generator}. With this tool, you can design your table with the desired style and then easily copy and paste it into your document. This approach simplifies the process and helps ensure the accurate representation of complex tables in your \LaTeX\ document. However, it's crucial to keep in mind that a table should be easily comprehensible for the reader and should not be overly complex. \textbf{The complexity of a table may impede understanding.} For example, \autoref{tab:table-04} presents a table with intricate details.
 
-\begin{table}[!htpb]
+\begin{table}[!htpb] 
     \caption{A table showcasing the usage of the complex tables.}
     \label{tab:table-04}
     \centering
@@ -259,30 +259,30 @@ Finally, you can create a description list. Unlike having a bullet point or a nu
 \section{Code Listings}
 At times, you may want to include source code from your programs and applications within your document. To achieve this, you can use two nested environments: \verb|\begin{listing}| to create a listing with both caption and label, and \verb|\begin{minted}| for code highlighting. \autoref{listing:c-code} provides an example of a source code in C.
 
-\begin{listing}[!htpb]
-\caption{Hello world in C.}
-\label{listing:c-code}
-\begin{minted}{c}
-#include <stdio.h>
-int main() {
-   printf("Hello, World!"); /* printf() outputs the quoted string */
-   return 0;
-}
-\end{minted}
-\end{listing}
+%\begin{listing}[!htpb]
+%\caption{Hello world in C.}
+%\label{listing:c-code}
+%\begin{minted}{c}
+%#include <stdio.h>
+%int main() {
+%   printf("Hello, World!");
+%   return 0;
+%}
+%\end{minted}
+%\end{listing}
 
 The code mentioned above was inserted into the document. However, an alternative approach is to input your code from an external file. To do so, you just need to use the command \verb|\inputminted{CODE_LANGUAGE}{FILE}|. Of course, you should place that command inside of the \verb|\begin{listing}| environment. \autoref{listing:haskell-code} illustrates an example of Haskell source code that has been input from an external file.
 
-\begin{listing}[!htpb]
-\caption{Factorial in Haskell.}
-\label{listing:haskell-code}
-\inputminted{haskell}{Code/Factorial.hs}
-\end{listing}
+%\begin{listing}[!htpb]
+%\caption{Factorial in Haskell.}
+%\label{listing:haskell-code}
+%\inputminted{haskell}{Code/Factorial.hs}
+%\end{listing}
 
 In some cases, when you simply want to highlight a specific command, it's recommended not to use \verb|listing| or \verb|minted|. Instead, you should utilise the \verb|\verb| command for inline highlighting or the \verb|\begin{verbatim}| environment for longer sections of highlighted code. An example of a lengthy \verb|verbatim| section is provided below, demonstrating how to create a \verb|listing| with an input code:
 
 \begin{verbatim}
-\begin{listing}[!htpb]
+\begin{listing}[!htpb] 
     \inputminted{CODE_LANGUAGE}{FILE}
     \caption{TEXT}
     \label{TEXT}
@@ -291,50 +291,11 @@ In some cases, when you simply want to highlight a specific command, it's recomm
 
 Sometimes it is necessary to display longer code that occupies more than one page. For this purpose, please use the environment \verb|\begin{longlisting}|. This environment will easily break your code into multiple pages for better readability without you worrying about the size of your code. An example is shown below in \autoref{listing:lisp-code}.
 
-\begin{longlisting}
-\caption{A sample of functions in Lisp.}
-\label{listing:lisp-code}
-\begin{minted}{lisp}
-(defun factorial (n)
-  "Calculate the factorial of a number."
-  (if (zerop n)
-      (* n (factorial (1- n)))))
-
-(defun fibonacci (n)
-  "Calculate the nth Fibonacci number."
-  (cond ((zerop n) 0)
-        ((= n 1) 1)
-        (t (+ (fibonacci (1- n)) (fibonacci (- n 2))))))
-
-(defun gcd (a b)
-  "Calculate the greatest common divisor of a and b."
-  (if (zerop b)
-      a
-      (gcd b (mod a b))))
-
-(defun primes-up-to (limit)
-  "Return a list of all prime numbers up to LIMIT."
-  (let ((primes '()))
-    (loop for i from 2 to limit
-          unless (some (lambda (p) (zerop (mod i p))) primes)
-          do (push i primes))
-    (nreverse primes)))
-
-(defun example-function (x)
-  "An example function to demonstrate Lisp capabilities."
-  (let ((result (list (factorial x)
-                      (fibonacci x)
-                      (gcd x 10)
-                      (primes-up-to x))))
-    (format t "Factorial of ~A: ~A~%" x (factorial x))
-    (format t "Fibonacci of ~A: ~A~%" x (fibonacci x))
-    (format t "GCD of ~A and 10: ~A~%" x (gcd x 10))
-    (format t "Primes up to ~A: ~A~%" x (primes-up-to x))
-    result))
-
-(example-function 10)
-\end{minted}
-\end{longlisting}
+%\begin{minted}{lisp}
+%(defun factorial (n) 
+%  (if (zerop n) 1
+%      (* n (factorial (- n 1)))))
+%\end{minted}
 
 \section{Equations}
 When writing equations and other mathematical expressions, \LaTeX~is a powerful and versatile tool. You can enter a formula in inline mode using the environment \verb|\(FORMULA\)| or use \verb|\begin{equation}| to display it in ``math mode'' with numbering. If you prefer not to display the equation number, you can use the environment \verb|\[FORMULA\]|.
